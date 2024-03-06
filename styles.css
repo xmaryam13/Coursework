@@ -1,25 +1,21 @@
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /*Import this from Google fonts*/
-    font-family: 'Kumbh Sans',sans-serif;
+    font-family: 'Kumbh Sans', sans-serif; 
 }
 
-/*Code for the layout of the navigation bar*/
 .navbar{
-    background: lightblue;
+    background: #009ddc;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem; /*Vary the sec size*/
+    font-size: 1.2rem;
     position: sticky;
     top: 0;
-    z-index: 999; /*Ensures where-ever you are on the site, it is not covered by anything*/
+    z-index: 999;
 }
-
 
 .navbar__container{
     display: flex;
@@ -28,30 +24,22 @@
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    margin: 0 auto; 
-    padding: 0 50px; 
+    margin: 0 auto;
+    padding: 0 50px;
 }
-
 
 #navbar__logo{
     background-color: lightblue;
-    background-image: linear-gradient(to top, darkblue 0%, lightblue
-     100%); 
-    background-size: 100%;
-    -webkit-background-clip: text; 
+    background-image: linear-gradient(to top, #0006bc 0%, #030374 100%);
+    -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     display: flex;
     align-items: center;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem
-
-}
-
-.fa-gem{
-    margin-right: 0.5rem;
+    text-decoration: none ;
+    font-size: 2rem;
 }
 
 .navbar__menu{
@@ -73,7 +61,6 @@
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
-
 }
 
 .navbar__btn{
@@ -94,25 +81,25 @@
     width: 100%;
     border: none;
     outline: none;
-    border-radius: 4px ;
+    border-radius: 4px;
     background: black;
     color: white;
 }
 
 .button:hover{
-    background: purple ;
+    background: purple;
     transition: all 0.3s ease;
 }
 
 .navbar__links:hover{
     color: darkblue;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease ;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 960px) {
     .navbar__container{
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         height: 80px;
         z-index: 1;
         width: 100%;
@@ -127,8 +114,8 @@
         width: 100%;
         position: absolute;
         top: -1000px;
-        opacity: 20;
-        transition: all 0.5s ease ;
+        opacity: 0;
+        transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
         background: lightblue;
@@ -148,12 +135,12 @@
         padding-left: 25px;
     }
 
-    .navbar__toggle  .bar{
+    .navbar__toggle .bar{
         width: 25px;
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background: white;
+        background: black;
     }
 
     .navbar__item{
@@ -166,7 +153,7 @@
         width: 100%;
         display: table;
     }
-    
+
     #mobile-menu{
         position: absolute;
         top: 20%;
@@ -201,6 +188,279 @@
     }
 
     #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate( -45deg);
     }
 }
+
+
+/* Something else CSS */
+
+.main{
+    background-color: lightblue;
+}
+
+.main__contrainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: lightblue;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h1{
+    font-size: 4rem;
+    background-color: lightblue;
+    background-image: linear-gradient(to top, darkblue 0%, rgb(0, 140, 255) 100% );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+
+.main__content h2{
+    font-size: 4rem;
+    background-color: lightblue;
+    background-image: linear-gradient(to top, rgb(0, 76, 139) 0%, rgb(0, 157, 255) 100% );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+
+.main__content p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background: black;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+
+.main__btn:after{
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: purple;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover{
+    color: white;
+}
+
+.main__btn:hover:after{
+    width: 100%;
+}
+
+.main__img--container{
+    text-align: center;
+}
+
+#main__img{
+    height: 80%;
+    width: 80%;
+}
+
+/*Mobile Responsive */
+
+@media screen and (max-width:768px){
+    .main__contrainer{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2{
+        font-size: 3rem;
+    }
+
+    .main__content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .main__content h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h2{
+        font-size: 2rem;
+    }
+
+    .main__content p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main__btn{
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/*PartII CSS*/
+
+.services{
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.services h1{
+    background-color: lightblue;
+    background-image: linear-gradient(
+        to right, 
+        #030374 0%,
+        #000086 0%, 
+        #009ddc 21%,
+        #009ddc 68%,
+        #009ddc 70%,
+        #000086 90%,
+        #030374 100%
+    );
+    background-size: 100%;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent
+}
+
+.services__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services__card {
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: linear-gradient(
+            to bottom,
+            navy 0%, 
+            blue 100%), 
+        url('/images/pic3.jpg');
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.services__card:nth-child(2) {
+    background-image: linear-gradient(
+            to bottom,
+            navy 0%, 
+            blue 100%), 
+        url('/images/pic4.jpg');
+}
+
+.services h2{
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+
+.services__card p{
+    position: absolute;
+    top: 400px;
+    left: 30px;
+}
+
+.services__card button{
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: black;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.services__card:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px){
+    .services{
+        height: 1600px;
+    }
+
+    .services h1{
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+
+@media screen and (max-width:480px){
+    .services{
+        height: 1400px;
+    }
+
+    .services h1{
+        font-size: 1.2rem;
+    }
+
+    .services__card{
+        width: 300px;
+    }
+}
+
+
